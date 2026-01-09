@@ -120,8 +120,10 @@ const ShinyText = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <h1 className="text-7xl font-bold">{text}</h1>
-      {miniText && <h2 className="text-2xl font-bold">{miniText}</h2>}
+      <h1 className="text-4xl font-bold md:text-5xl">{text}</h1>
+      {miniText && (
+        <h2 className="text-xl font-bold md:text-2xl">{miniText}</h2>
+      )}
     </motion.span>
   )
 }

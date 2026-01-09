@@ -74,7 +74,7 @@ const TrueFocus = ({
             ref={(el) => (wordRefs.current[index] = el)}
             className={`focus-word ${manualMode ? "manual" : ""} ${
               isActive && !manualMode ? "active" : ""
-            }`}
+            } text-black`}
             style={{
               filter: manualMode
                 ? isActive
