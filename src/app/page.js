@@ -1,6 +1,12 @@
+//components
 import StrokedCloud from "@/components/StrokedCloud/StrokedCloud"
 import ShinyText from "../components/ShinyText/ShinyText"
 import TrueFocus from "@/components/TrueFocus/TrueFocus"
+import OurServicesArticle from "@/components/OurServicesArticle/OurServicesArticle"
+import HowItWorksArticle from "@/components/HowItWorksArticle/HowItWorksArticle"
+//data
+import { OURSERVICES } from "@/data/ourservices"
+import { HOWITWORKS } from "@/data/howitworks"
 
 export default function Home() {
   return (
@@ -45,77 +51,57 @@ export default function Home() {
       </main>
       <aside>
         {/* OUR SERVICES */}
-        <section className="m-2 pb-6 border-2 border-black md:m-4 bg-[radial-gradient(circle_at_center,#b79ad0_0%,#8f6bb1_55%,#6f4a93_100%),repeating-radial-gradient(circle_at_center,rgba(255,255,255,0.22)_0_10px,rgba(0,0,0,0)_10px_20px)] bg-blend-overlay">
+        <section
+          className="relative m-2 pb-6 border-2 border-black md:m-4 bg-[#214888]
+    bg-[repeating-linear-gradient(120deg,rgba(0,0,0,0.05)_0_2px,rgba(0,0,0,0)_2px_6px)]"
+        >
+          <img
+            className="absolute -top-11 right-0 w-24 lg:w-44 lg:-top-20"
+            src="./questionMark.png"
+            alt="question mark"
+          />
           <div className="w-fit p-1 bg-[#f2f2f2] border-2 border-black">
             <h2 className="text-black text-4xl font-bold md:text-5xl">
               OUR SERVICES
             </h2>
           </div>
-          <div className="flex flex-col items-center justify-center mt-6 md:flex-row md:items-stretch">
-            <article className="w-[90%] max-w-96 bg-gray-200 text-black border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.7)]">
-              <h3 className="text-2xl text-center">CLEANING</h3>
-              <div className="flex items-center pl-8">
-                <ul className="list-disc">
-                  <li>House</li>
-                  <li>Office</li>
-                  <li>Spring</li>
-                </ul>
-                <div>
-                  <img src="./cleaning.png" alt="cleaning" />
-                </div>
-              </div>
-            </article>
-            <article className="w-[90%] max-w-96 bg-gray-200 text-black mt-4 md:ml-4 md:mt-0 border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.7)]">
-              <h3 className="text-2xl text-center">MOVING</h3>
-              <div className="flex items-center pl-8">
-                <ul className="list-disc">
-                  <li>Homes</li>
-                  <li>Apartments</li>
-                  <li>Offices</li>
-                </ul>
-                <div>
-                  <img src="./moving.png" alt="moving" />
-                </div>
-              </div>
-            </article>
+          <div className="flex flex-col items-center justify-center gap-4 mt-6 md:flex-row md:items-stretch">
+            {OURSERVICES.map((item) => (
+              <OurServicesArticle
+                key={item.id}
+                title={item.title}
+                subtitles={item.subtitles}
+                heroImg={item.heroImg}
+              />
+            ))}
           </div>
         </section>
         {/* HOW IT WORKS */}
-        <section className="m-2 pb-6 border-2 border-black md:m-4 bg-[radial-gradient(circle_at_center,#b79ad0_0%,#8f6bb1_55%,#6f4a93_100%),repeating-radial-gradient(circle_at_center,rgba(255,255,255,0.22)_0_10px,rgba(0,0,0,0)_10px_20px)] bg-blend-overlay">
+        <section
+          className=" relative
+    m-2 pb-6 border-2 border-black md:m-4
+    bg-[#218842]
+    bg-[repeating-linear-gradient(45deg,rgba(0,0,0,0.05)_0_2px,rgba(0,0,0,0)_2px_6px)]
+  "
+        >
+          <img
+            className="absolute -top-11 right-0 w-24 lg:w-44 lg:-top-20 lg:right-[50%] lg:translate-x-[50%]"
+            src="./warrningMark.png"
+            alt="warrning mark"
+          />
           <div className="w-fit p-1 bg-[#f2f2f2] border-2 border-black">
             <h2 className="text-black text-4xl font-bold md:text-5xl">
               HOW IT WORKS
             </h2>
           </div>
-          <div className="flex flex-col items-center justify-center mt-6 md:flex-row md:items-stretch">
-            <article className="w-[90%] max-w-80 bg-gray-200 text-black border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.7)]">
-              <h3 className="text-2xl text-center border-b-2">
-                1) GET A QUOTE
-              </h3>
-              <div>
-                <div>
-                  <img src="./quote.png" alt="get a quote" />
-                </div>
-              </div>
-            </article>
-            <article className="w-[90%] max-w-80 bg-gray-200 text-black mt-4 md:ml-4 md:mt-0 border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.7)]">
-              <h3 className="text-2xl text-center border-b-2">2) SCHEDULE</h3>
-              <div>
-                <div>
-                  <img src="./schedule.png" alt="schedule" />
-                </div>
-              </div>
-            </article>
-            <article className="w-[90%] max-w-80 bg-gray-200 text-black mt-4 md:ml-4 md:mt-0 border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.7)]">
-              <h3 className="text-2xl text-center border-b-2">
-                3) GET IT DONE
-              </h3>
-              <div>
-                <div>
-                  <img src="./done.png" alt="get it done" />
-                </div>
-              </div>
-            </article>
+          <div className="flex flex-col items-center justify-center gap-4 mt-6 md:flex-row md:items-stretch">
+            {HOWITWORKS.map((item) => (
+              <HowItWorksArticle
+                key={item.id}
+                title={item.title}
+                heroImg={item.heroImg}
+              />
+            ))}
           </div>
         </section>
       </aside>
