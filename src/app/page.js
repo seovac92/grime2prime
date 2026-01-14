@@ -56,7 +56,7 @@ export default function Home() {
     bg-[repeating-linear-gradient(120deg,rgba(0,0,0,0.05)_0_2px,rgba(0,0,0,0)_2px_6px)]"
         >
           <img
-            className="absolute -top-11 right-0 w-24 lg:w-44 lg:-top-20"
+            className="absolute top-10 right-0 w-20 md:w-24 md:-top-11 lg:w-44 lg:-top-20"
             src="./questionMark.png"
             alt="question mark"
           />
@@ -85,7 +85,7 @@ export default function Home() {
   "
         >
           <img
-            className="absolute -top-11 right-0 w-24 lg:w-44 lg:-top-20 lg:right-[50%] lg:translate-x-[50%]"
+            className="absolute top-10 right-0 w-20 md:w-24 md:-top-11 lg:w-44 lg:-top-20 lg:right-[50%] lg:translate-x-[50%]"
             src="./warrningMark.png"
             alt="warrning mark"
           />
