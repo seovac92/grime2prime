@@ -31,11 +31,7 @@ export default function Home() {
           <div className="max-w-120">
             <img src="./womanHero.png" alt="cleaning hero" />
           </div>
-          <StrokedCloud
-            width={400}
-            text="Clean & move"
-            textSecondRow="like a pro!"
-          />
+          <StrokedCloud width={400} text="Clean & move like a pro!" />
         </section>
         <TrueFocus
           sentence="Moving Cleaning"
