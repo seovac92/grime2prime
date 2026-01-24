@@ -31,9 +31,6 @@ export default function Home() {
           <div className="max-w-120">
             <img src="./womanHero.png" alt="cleaning hero" />
           </div>
-          {/* <div className="max-w-120">
-            <img src="./movingHero.png" alt="moving hero" />
-          </div> */}
           <StrokedCloud
             width={400}
             text="Clean & move"
@@ -50,6 +47,43 @@ export default function Home() {
         />
       </main>
       <aside>
+        {/* ABOUT US */}
+        <section
+          className="relative m-2 pb-6 border-2 border-black md:m-4 bg-[#214888]
+    bg-[repeating-linear-gradient(120deg,rgba(0,0,0,0.05)_0_2px,rgba(0,0,0,0)_2px_6px)]"
+        >
+          {/* <img
+            className="absolute top-10 right-0 w-20 md:w-24 md:-top-11 lg:w-44 lg:-top-20"
+            src="./questionMark.png"
+            alt="question mark"
+          /> */}
+          <div className="w-fit p-1 bg-[#f2f2f2] border-2 border-black">
+            <h2 className="text-black text-4xl font-bold md:text-5xl">
+              ABOUT US
+            </h2>
+          </div>
+          <div className="flex flex-col items-center w-[90%] mx-auto pt-8 md:flex-row md:justify-center">
+            <div className="relative w-80 lg:w-md">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Expedita molestias, magni nobis laboriosam assumenda sapiente
+                reprehenderit velit rem aut ad tempora deleniti labore eius
+                cumque, culpa nemo excepturi blanditiis doloremque consequatur,
+                distinctio dignissimos iure dolorum aliquam eos. Autem dolores
+                suscipit facere nihil quaerat minima, assumenda facilis quia
+                numquam exercitationem laudantium.
+              </p>
+              <img
+                className="absolute top-full right-0 w-44 md:-top-12 md:-right-36 lg:"
+                src="./explosion.svg"
+                alt="explosion"
+              />
+            </div>
+            <div className="w-80 lg:w-md">
+              <img src="./movingHero.png" alt="hero" />
+            </div>
+          </div>
+        </section>
         {/* OUR SERVICES */}
         <section
           className="relative m-2 pb-6 border-2 border-black md:m-4 bg-[#214888]
