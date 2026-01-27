@@ -10,10 +10,10 @@ const StrokedCloud = ({ text }) => {
         </strong>
       </div>
       <div className="absolute bottom-6 left-[50%] -translate-x-[50%] w-full flex justify-center">
-        <button className="p-1 bg-white border-2 border-black text-black text-xl shadow-[4px_4px_0_0_rgba(0,0,0,0.7)]">
+        {/* <button className="p-1 bg-white border-2 border-black text-black text-xl shadow-[4px_4px_0_0_rgba(0,0,0,0.7)]">
           Get a quote
-        </button>
-        <button className="ml-3 p-1 bg-white border-2 border-black text-black text-xl shadow-[4px_4px_0_0_rgba(0,0,0,0.7)]">
+        </button> */}
+        <button className="p-2 bg-white border-2 border-black text-black text-2xl shadow-[4px_4px_0_0_rgba(0,0,0,0.7)]">
           Book now
         </button>
       </div>

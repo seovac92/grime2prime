@@ -41,18 +41,18 @@ export default function Home() {
           animationDuration={1}
           pauseBetweenAnimations={1}
         />
+        <img
+          className="fixed bottom-0 right-0 z-50 w-32 cursor-pointer animate-bounce"
+          src="./booknow.png"
+          alt="book now"
+        />
       </main>
       <aside>
         {/* ABOUT US */}
         <section
-          className="relative m-2 pb-6 border-2 border-black md:m-4 bg-[#214888]
-    bg-[repeating-linear-gradient(120deg,rgba(0,0,0,0.05)_0_2px,rgba(0,0,0,0)_2px_6px)]"
+          className="relative m-2 pb-6 border-2 border-black md:m-4
+  bg-[linear-gradient(135deg,#2fa4ad_0%,#217f88_55%,#165e64_100%)]"
         >
-          {/* <img
-            className="absolute top-10 right-0 w-20 md:w-24 md:-top-11 lg:w-44 lg:-top-20"
-            src="./questionMark.png"
-            alt="question mark"
-          /> */}
           <div className="w-fit p-1 bg-[#f2f2f2] border-2 border-black">
             <h2 className="text-black text-4xl font-bold md:text-5xl">
               ABOUT US
@@ -61,13 +61,15 @@ export default function Home() {
           <div className="flex flex-col items-center w-[90%] mx-auto pt-8 md:flex-row md:justify-center">
             <div className="relative w-80 lg:w-md">
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Expedita molestias, magni nobis laboriosam assumenda sapiente
-                reprehenderit velit rem aut ad tempora deleniti labore eius
-                cumque, culpa nemo excepturi blanditiis doloremque consequatur,
-                distinctio dignissimos iure dolorum aliquam eos. Autem dolores
-                suscipit facere nihil quaerat minima, assumenda facilis quia
-                numquam exercitationem laudantium.
+                Grime2Prime is a Vancouver-based company offering reliable
+                moving and professional cleaning services for homes, apartments,
+                and offices. We work fast, carefully, and with attention to
+                detail to make every job smooth and stress-free. Whether you
+                need help with a full move, packing support, hauling, or a deep
+                clean before or after moving, our team is ready to handle it. We
+                proudly serve the Greater Vancouver area and adapt to your
+                schedule, making sure your space is clean, refreshed, and ready
+                on time.
               </p>
               <img
                 className="absolute top-full right-0 w-44 md:-top-12 md:-right-36 lg:"
@@ -86,7 +88,7 @@ export default function Home() {
     bg-[repeating-linear-gradient(120deg,rgba(0,0,0,0.05)_0_2px,rgba(0,0,0,0)_2px_6px)]"
         >
           <img
-            className="absolute top-10 right-0 w-20 md:w-24 md:-top-11 lg:w-44 lg:-top-20"
+            className="absolute top-10 right-0 w-20 md:w-24 md:-top-11 lg:w-44 lg:-top-20 z-10"
             src="./questionMark.png"
             alt="question mark"
           />
@@ -95,7 +97,7 @@ export default function Home() {
               OUR SERVICES
             </h2>
           </div>
-          <div className="flex flex-col items-center justify-center gap-4 mt-6 md:flex-row md:items-stretch">
+          <div className="relative flex flex-col items-center justify-center gap-32 mt-6 md:flex-row md:items-stretch">
             {OURSERVICES.map((item) => (
               <OurServicesArticle
                 key={item.id}
@@ -104,6 +106,11 @@ export default function Home() {
                 heroImg={item.heroImg}
               />
             ))}
+            <img
+              className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[40%] w-48 z-10 animate-pulse"
+              src="./deepclean.png"
+              alt="deep carpet clean"
+            />
           </div>
         </section>
         {/* HOW IT WORKS */}
@@ -115,9 +122,9 @@ export default function Home() {
   "
         >
           <img
-            className="absolute top-10 right-0 w-20 md:w-24 md:-top-11 lg:w-44 lg:-top-20 lg:right-[50%] lg:translate-x-[50%]"
+            className="absolute top-10 right-0 w-20 md:w-24 md:-top-11 lg:w-44 lg:-top-20"
             src="./warrningMark.png"
-            alt="warrning mark"
+            alt="warning mark"
           />
           <div className="w-fit p-1 bg-[#f2f2f2] border-2 border-black">
             <h2 className="text-black text-4xl font-bold md:text-5xl">
