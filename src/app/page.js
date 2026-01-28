@@ -42,7 +42,7 @@ export default function Home() {
           pauseBetweenAnimations={1}
         />
         <img
-          className="fixed bottom-0 right-0 z-50 w-32 cursor-pointer animate-bounce"
+          className="fixed bottom-0 right-0 z-50 w-32 md:w-48 cursor-pointer animate-bounce"
           src="./booknow.png"
           alt="book now"
         />
@@ -142,7 +142,64 @@ export default function Home() {
           </div>
         </section>
       </aside>
-      <footer></footer>
+      <footer
+        className="relative m-2 border-2 border-black md:m-4
+  bg-[linear-gradient(135deg,#70838f_0%,#8595a0_55%,#70838f_100%)]"
+      >
+        <div className="w-fit p-1 bg-[#f2f2f2] border-2 border-black">
+          <h2 className="text-black text-4xl font-bold md:text-5xl">
+            CONTACTS
+          </h2>
+        </div>
+        <div className="md:flex md:flex-row-reverse md:justify-end md:items-center">
+          <div className="w-fit h-fit mx-auto my-3 text-center border-b-2 md:text-left md:ml-32 md:border-b-0 md:border-l-2 md:pl-3 lg:text-2xl">
+            <p>Vancouver & Burnaby, BC</p>
+
+            <time itemProp="openingHours" dateTime="Mo-Su 08:00-18:00">
+              Monday – Sunday, 8:00 AM – 6:00 PM
+            </time>
+
+            <address>
+              <p>
+                <a href="mailto:info@grime2prime.ca">info@grime2prime.ca</a>
+              </p>
+              <p>
+                <a href="tel:+1604XXXXXXX">(604) XXX-XXXX</a>
+              </p>
+            </address>
+          </div>
+          <div className="relative w-fit">
+            <img className="max-w-60" src="./contactUs.png" alt="contact us" />
+            <div className="absolute -top-7 -right-16 w-48">
+              <img src="./cloud.png" alt="cloud" />
+              <img
+                className="absolute top-[20%] left-[25%] w-16 transition-transform duration-200 ease-out
+             hover:scale-105 cursor-pointer"
+                src="./instagram.png"
+                alt="instagram"
+              />
+              <img
+                className="absolute top-[20%] left-[50%] w-16 transition-transform duration-200 ease-out
+             hover:scale-105 cursor-pointer"
+                src="./facebook.png"
+                alt="facebook"
+              />
+              <img
+                className="absolute top-[40%] left-[25%] w-16 transition-transform duration-200 ease-out
+             hover:scale-105 cursor-pointer"
+                src="./phone.png"
+                alt="phone"
+              />
+              <img
+                className="absolute top-[40%] left-[50%] w-16 transition-transform duration-200 ease-out
+             hover:scale-105 cursor-pointer"
+                src="./email.png"
+                alt="email"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   )
 }
