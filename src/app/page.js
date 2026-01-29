@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       {/* <header></header> */}
-      <main className="m-2 border-2 border-black md:m-4 bg-[radial-gradient(circle_at_center,#b79ad0_0%,#8f6bb1_55%,#6f4a93_100%),repeating-radial-gradient(circle_at_center,rgba(255,255,255,0.22)_0_10px,rgba(0,0,0,0)_10px_20px)] bg-blend-overlay">
+      <main className="m-2 border-2 border-black md:m-4 bg-[linear-gradient(0deg,#662a6c_0%,#b658be_55%,#662a6c_100%)]">
         <section className="relative flex flex-col items-center md:flex-row-reverse md:items-start md:justify-end">
           <div className="p-1 bg-[#f2f2f2] border-2 border-black">
             <ShinyText
@@ -51,7 +51,7 @@ export default function Home() {
         {/* ABOUT US */}
         <section
           className="relative m-2 pb-6 border-2 border-black md:m-4
-  bg-[linear-gradient(135deg,#2fa4ad_0%,#217f88_55%,#165e64_100%)]"
+  bg-[linear-gradient(20deg,#4a0001_0%,#9e1b1f_55%,#4a0001_100%)]"
         >
           <div className="w-fit p-1 bg-[#f2f2f2] border-2 border-black">
             <h2 className="text-black text-4xl font-bold md:text-5xl">
@@ -85,7 +85,7 @@ export default function Home() {
         {/* OUR SERVICES */}
         <section
           className="relative m-2 pb-6 border-2 border-black md:m-4 bg-[#214888]
-    bg-[repeating-linear-gradient(120deg,rgba(0,0,0,0.05)_0_2px,rgba(0,0,0,0)_2px_6px)]"
+    bg-[linear-gradient(20deg,#0b1c2d_0%,#1f4e79_55%,#0b1c2d_100%)]"
         >
           <img
             className="absolute top-10 right-0 w-20 md:w-24 md:-top-11 lg:w-44 lg:-top-20 z-10"
@@ -118,7 +118,7 @@ export default function Home() {
           className=" relative
     m-2 pb-6 border-2 border-black md:m-4
     bg-[#218842]
-    bg-[repeating-linear-gradient(45deg,rgba(0,0,0,0.05)_0_2px,rgba(0,0,0,0)_2px_6px)]
+    bg-[linear-gradient(20deg,#4a0001_0%,#9e1b1f_55%,#4a0001_100%)]
   "
         >
           <img
@@ -144,7 +144,7 @@ export default function Home() {
       </aside>
       <footer
         className="relative m-2 border-2 border-black md:m-4
-  bg-[linear-gradient(135deg,#70838f_0%,#8595a0_55%,#70838f_100%)]"
+  bg-[linear-gradient(20deg,#0b1c2d_0%,#1f4e79_55%,#0b1c2d_100%)]"
       >
         <div className="w-fit p-1 bg-[#f2f2f2] border-2 border-black">
           <h2 className="text-black text-4xl font-bold md:text-5xl">
