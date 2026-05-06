@@ -9,6 +9,7 @@ import { OURSERVICES } from "@/data/ourservices"
 import { HOWITWORKS } from "@/data/howitworks"
 
 export default function Home() {
+  //before changing everything
   return (
     <>
       {/* <header></header> */}
