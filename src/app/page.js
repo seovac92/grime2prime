@@ -1,9 +1,6 @@
+import Image from "next/image"
 //components
-import StrokedCloud from "@/components/StrokedCloud/StrokedCloud"
-import ShinyText from "../components/ShinyText/ShinyText"
-import TrueFocus from "@/components/TrueFocus/TrueFocus"
-import OurServicesArticle from "@/components/OurServicesArticle/OurServicesArticle"
-import HowItWorksArticle from "@/components/HowItWorksArticle/HowItWorksArticle"
+import RotatingText from "@/components/RotatingText/RotatingText"
 //data
 import { OURSERVICES } from "@/data/ourservices"
 import { HOWITWORKS } from "@/data/howitworks"
@@ -12,194 +9,59 @@ export default function Home() {
   //before changing everything
   return (
     <>
-      {/* <header></header> */}
-      <main className="m-2 border-2 border-black md:m-4 bg-[linear-gradient(0deg,#662a6c_0%,#b658be_55%,#662a6c_100%)]">
-        <section className="relative flex flex-col items-center md:flex-row-reverse md:items-start md:justify-end">
-          <div className="p-1 bg-[#f2f2f2] border-2 border-black">
-            <ShinyText
-              text="Grime2prime"
-              miniText="Cleaning&Moving"
-              speed={3}
-              delay={0}
-              color="#121212"
-              shineColor="#ffffff"
-              spread={120}
-              direction="left"
-              yoyo={false}
-              pauseOnHover={false}
-            />
+      {/* <header>
+        
+      </header> */}
+
+      <main>
+        <section className="relative h-screen">
+          <Image
+            src="/hero.webp"
+            alt="Moving truck in Vancouver"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/20 z-10" />
+          <div className="relative h-full z-20">
+            <div className="absolute top-[30%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-72 md:w-md lg:w-lg">
+              <h1 className="inline-flex items-center whitespace-nowrap text-4xl font-bold md:text-6xl lg:text-7xl">
+                WE DO{" "}
+                <RotatingText
+                  texts={["CLEANING", "MOVING"]}
+                  mainClassName="inline-flex min-w-fit px-3 text-blue-500 overflow-hidden py-2 justify-center rounded-lg"
+                  staggerFrom="last"
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  exit={{ y: "-120%" }}
+                  staggerDuration={0.025}
+                  splitLevelClassName="overflow-hidden"
+                  transition={{
+                    type: "spring",
+                    damping: 30,
+                    stiffness: 400,
+                    layout: {
+                      duration: 0.4,
+                    },
+                  }}
+                  rotationInterval={2000}
+                  splitBy="characters"
+                  auto
+                  loop
+                />{" "}
+              </h1>
+            </div>
           </div>
-          <div className="max-w-120">
-            <img src="./womanHero.png" alt="cleaning hero" />
-          </div>
-          <StrokedCloud width={400} text="Clean & move like a pro!" />
         </section>
-        <TrueFocus
-          sentence="Moving Cleaning"
-          manualMode={false}
-          blurAmount={5}
-          borderColor="darkblue"
-          animationDuration={1}
-          pauseBetweenAnimations={1}
-        />
-        <img
-          className="fixed bottom-0 right-0 z-50 w-32 md:w-48 cursor-pointer animate-bounce"
-          src="./booknow.png"
-          alt="book now"
-        />
       </main>
-      <aside>
-        {/* ABOUT US */}
-        <section
-          className="relative m-2 pb-6 border-2 border-black md:m-4
-  bg-[linear-gradient(20deg,#4a0001_0%,#9e1b1f_55%,#4a0001_100%)]"
-        >
-          <div className="w-fit p-1 bg-[#f2f2f2] border-2 border-black">
-            <h2 className="text-black text-4xl font-bold md:text-5xl">
-              ABOUT US
-            </h2>
-          </div>
-          <div className="flex flex-col items-center w-[90%] mx-auto pt-8 md:flex-row md:justify-center">
-            <div className="relative w-80 lg:w-md">
-              <p>
-                Grime2Prime is a Vancouver-based company offering reliable
-                moving and professional cleaning services for homes, apartments,
-                and offices. We work fast, carefully, and with attention to
-                detail to make every job smooth and stress-free. Whether you
-                need help with a full move, packing support, hauling, or a deep
-                clean before or after moving, our team is ready to handle it. We
-                proudly serve the Greater Vancouver area and adapt to your
-                schedule, making sure your space is clean, refreshed, and ready
-                on time.
-              </p>
-              <img
-                className="absolute top-full right-0 w-44 md:-top-12 md:-right-36 lg:"
-                src="./explosion.svg"
-                alt="explosion"
-              />
-            </div>
-            <div className="w-80 lg:w-md">
-              <img src="./movingHero.png" alt="hero" />
-            </div>
-          </div>
-        </section>
-        {/* OUR SERVICES */}
-        <section
-          className="relative m-2 pb-6 border-2 border-black md:m-4 bg-[#214888]
-    bg-[linear-gradient(20deg,#0b1c2d_0%,#1f4e79_55%,#0b1c2d_100%)]"
-        >
-          <img
-            className="absolute top-10 right-0 w-20 md:w-24 md:-top-11 lg:w-44 lg:-top-20 z-10"
-            src="./questionMark.png"
-            alt="question mark"
-          />
-          <div className="w-fit p-1 bg-[#f2f2f2] border-2 border-black">
-            <h2 className="text-black text-4xl font-bold md:text-5xl">
-              OUR SERVICES
-            </h2>
-          </div>
-          <div className="relative flex flex-col items-center justify-center gap-32 mt-6 md:flex-row md:items-stretch">
-            {OURSERVICES.map((item) => (
-              <OurServicesArticle
-                key={item.id}
-                title={item.title}
-                subtitles={item.subtitles}
-                heroImg={item.heroImg}
-              />
-            ))}
-            <img
-              className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[40%] w-48 z-10 animate-pulse"
-              src="./deepclean.png"
-              alt="deep carpet clean"
-            />
-          </div>
-        </section>
-        {/* HOW IT WORKS */}
-        <section
-          className=" relative
-    m-2 pb-6 border-2 border-black md:m-4
-    bg-[#218842]
-    bg-[linear-gradient(20deg,#4a0001_0%,#9e1b1f_55%,#4a0001_100%)]
-  "
-        >
-          <img
-            className="absolute top-10 right-0 w-20 md:w-24 md:-top-11 lg:w-44 lg:-top-20"
-            src="./warrningMark.png"
-            alt="warning mark"
-          />
-          <div className="w-fit p-1 bg-[#f2f2f2] border-2 border-black">
-            <h2 className="text-black text-4xl font-bold md:text-5xl">
-              HOW IT WORKS
-            </h2>
-          </div>
-          <div className="flex flex-col items-center justify-center gap-4 mt-6 md:flex-row md:items-stretch">
-            {HOWITWORKS.map((item) => (
-              <HowItWorksArticle
-                key={item.id}
-                title={item.title}
-                heroImg={item.heroImg}
-              />
-            ))}
-          </div>
-        </section>
-      </aside>
-      <footer
-        className="relative m-2 border-2 border-black md:m-4
-  bg-[linear-gradient(20deg,#0b1c2d_0%,#1f4e79_55%,#0b1c2d_100%)]"
-      >
-        <div className="w-fit p-1 bg-[#f2f2f2] border-2 border-black">
-          <h2 className="text-black text-4xl font-bold md:text-5xl">
-            CONTACTS
-          </h2>
-        </div>
-        <div className="md:flex md:flex-row-reverse md:justify-end md:items-center">
-          <div className="w-fit h-fit mx-auto my-3 text-center border-b-2 md:text-left md:ml-32 md:border-b-0 md:border-l-2 md:pl-3 lg:text-2xl">
-            <p>Vancouver & Burnaby, BC</p>
 
-            <time itemProp="openingHours" dateTime="Mo-Su 08:00-18:00">
-              Monday – Sunday, 8:00 AM – 6:00 PM
-            </time>
+      <aside>{/* Sidebar, reklame, dodatne informacije, widgeti... */}</aside>
 
-            <address>
-              <p>
-                <a href="mailto:info@grime2prime.ca">info@grime2prime.ca</a>
-              </p>
-              <p>
-                <a href="tel:+1604XXXXXXX">(604) XXX-XXXX</a>
-              </p>
-            </address>
-          </div>
-          <div className="relative w-fit">
-            <img className="max-w-60" src="./contactUs.png" alt="contact us" />
-            <div className="absolute -top-7 -right-16 w-48">
-              <img src="./cloud.png" alt="cloud" />
-              <img
-                className="absolute top-[20%] left-[25%] w-16 transition-transform duration-200 ease-out
-             hover:scale-105 cursor-pointer"
-                src="./instagram.png"
-                alt="instagram"
-              />
-              <img
-                className="absolute top-[20%] left-[50%] w-16 transition-transform duration-200 ease-out
-             hover:scale-105 cursor-pointer"
-                src="./facebook.png"
-                alt="facebook"
-              />
-              <img
-                className="absolute top-[40%] left-[25%] w-16 transition-transform duration-200 ease-out
-             hover:scale-105 cursor-pointer"
-                src="./phone.png"
-                alt="phone"
-              />
-              <img
-                className="absolute top-[40%] left-[50%] w-16 transition-transform duration-200 ease-out
-             hover:scale-105 cursor-pointer"
-                src="./email.png"
-                alt="email"
-              />
-            </div>
-          </div>
-        </div>
+      <footer>
+        {/* Copyright, linkovi, kontakt... */}
+        <address>
+          Kontakt: <a href="mailto:info@example.com">info@example.com</a>
+        </address>
       </footer>
     </>
   )
