@@ -24,7 +24,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black/20 z-10" />
           <div className="relative h-full z-20">
-            <div className="absolute top-[30%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-60 md:w-md lg:w-lg">
+            <div className="absolute top-[30%] left-[47%] -translate-x-[50%] -translate-y-[50%] w-60 md:w-md lg:w-lg">
               <h1 className="inline-flex items-center whitespace-nowrap text-3xl font-bold md:text-6xl lg:text-7xl">
                 WE DO{" "}
                 <RotatingText
