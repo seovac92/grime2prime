@@ -51,6 +51,14 @@ export default function Home() {
                 />{" "}
               </h1>
             </div>
+            <Image
+              src="/white-logo.png"
+              alt="Grime 2 Prime logo"
+              width={800}
+              height={800}
+              priority
+              className="absolute top-[53%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-60"
+            />
           </div>
         </section>
       </main>
