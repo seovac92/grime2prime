@@ -3,6 +3,7 @@ import Image from "next/image"
 import RotatingText from "@/components/RotatingText/RotatingText"
 import AnimatedContent from "@/components/AnimatedContent/AnimatedContent"
 import Dock from "@/components/FloatMenu/FloatMenu"
+import ShinyText from "@/components/ShinyText/ShinyText"
 
 export default function Home() {
   //before changing everything
@@ -46,27 +47,44 @@ export default function Home() {
                 />{" "}
               </h1>
             </div>
-            <AnimatedContent
-              distance={100}
-              direction="horizontal"
-              reverse={true}
-              duration={0.8}
-              ease="power3.out"
-              initialOpacity={0}
-              animateOpacity
-              scale={1}
-              threshold={0.1}
-              delay={0}
-            >
-              <Image
-                src="/white-logo.png"
-                alt="Grime 2 Prime logo"
-                width={800}
-                height={800}
-                priority
-                className="w-60"
-              />
-            </AnimatedContent>
+            <div>
+              <AnimatedContent
+                distance={100}
+                direction="horizontal"
+                reverse={true}
+                duration={0.8}
+                ease="power3.out"
+                initialOpacity={0}
+                animateOpacity
+                scale={1}
+                threshold={0.1}
+                delay={0}
+                className="absolute top-[53%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
+              >
+                <Image
+                  src="/white-logo.png"
+                  alt="Grime 2 Prime logo"
+                  width={800}
+                  height={800}
+                  priority
+                  className="w-60"
+                />
+              </AnimatedContent>
+              <h1 className="absolute top-[70%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-full text-center text-4xl md:top-[75%]">
+                <ShinyText
+                  text="GRIME 2 PRIME"
+                  speed={2}
+                  delay={0}
+                  color="#4299e1"
+                  shineColor="#ffffff"
+                  spread={120}
+                  direction="left"
+                  yoyo={false}
+                  pauseOnHover={false}
+                  disabled={false}
+                />
+              </h1>
+            </div>
           </div>
         </section>
         <section className="flex flex-col max-w-3xl my-10 mx-auto px-10 text-black">

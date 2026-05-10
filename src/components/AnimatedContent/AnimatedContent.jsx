@@ -109,7 +109,7 @@ const AnimatedContent = ({
   ]);
 
   return (
-    <div ref={ref} className={`invisible ${className} absolute top-[53%] left-[50%] -translate-x-[50%] -translate-y-[50%]`} {...props}>
+    <div ref={ref} className={`invisible ${className}`} {...props}>
       {children}
     </div>
   );
