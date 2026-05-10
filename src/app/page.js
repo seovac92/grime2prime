@@ -1,9 +1,8 @@
 import Image from "next/image"
 //components
 import RotatingText from "@/components/RotatingText/RotatingText"
-//data
-import { OURSERVICES } from "@/data/ourservices"
-import { HOWITWORKS } from "@/data/howitworks"
+import AnimatedContent from "@/components/AnimatedContent/AnimatedContent"
+import Dock from "@/components/FloatMenu/FloatMenu"
 
 export default function Home() {
   //before changing everything
@@ -51,14 +50,27 @@ export default function Home() {
                 />{" "}
               </h1>
             </div>
-            <Image
-              src="/white-logo.png"
-              alt="Grime 2 Prime logo"
-              width={800}
-              height={800}
-              priority
-              className="absolute top-[53%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-60"
-            />
+            <AnimatedContent
+              distance={100}
+              direction="horizontal"
+              reverse={true}
+              duration={0.8}
+              ease="power3.out"
+              initialOpacity={0}
+              animateOpacity
+              scale={1}
+              threshold={0.1}
+              delay={0}
+            >
+              <Image
+                src="/white-logo.png"
+                alt="Grime 2 Prime logo"
+                width={800}
+                height={800}
+                priority
+                className="w-60"
+              />
+            </AnimatedContent>
           </div>
         </section>
       </main>
@@ -66,10 +78,7 @@ export default function Home() {
       <aside>{/* Sidebar, reklame, dodatne informacije, widgeti... */}</aside>
 
       <footer>
-        {/* Copyright, linkovi, kontakt... */}
-        <address>
-          Kontakt: <a href="mailto:info@example.com">info@example.com</a>
-        </address>
+        <Dock panelHeight={68} baseItemSize={50} magnification={70} />
       </footer>
     </>
   )
