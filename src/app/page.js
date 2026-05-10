@@ -8,10 +8,6 @@ export default function Home() {
   //before changing everything
   return (
     <>
-      {/* <header>
-        
-      </header> */}
-
       <main>
         <section className="relative h-screen">
           <Image
@@ -73,9 +69,37 @@ export default function Home() {
             </AnimatedContent>
           </div>
         </section>
+        <section className="flex flex-col max-w-3xl my-10 mx-auto px-10 text-black">
+          <article className="text-center">
+            <h2 className="text-3xl text-center mb-5">ABOUT US</h2>
+            <p>
+              Based in Vancouver, we specialize in professional apartment
+              cleaning and reliable moving services designed to make your life
+              easier. Our goal is to provide fast, efficient, and high-quality
+              service while ensuring every customer has a smooth and stress-free
+              experience. Whether you are moving into a new home, relocating
+              across the city, or simply need a deep and detailed cleaning, our
+              team is committed to delivering dependable results with care and
+              professionalism. We take pride in helping our clients keep their
+              spaces clean, organized, and ready for a fresh start. At Grime 2
+              Prime, customer satisfaction, attention to detail, and trustworthy
+              service are at the center of everything we do.
+            </p>
+          </article>
+          <article className="mt-8">
+            <Image
+              src="/logo.svg"
+              alt="Grime 2 Prime logo"
+              width={800}
+              height={800}
+              priority
+              className="max-w-60 mx-auto"
+            />
+          </article>
+        </section>
       </main>
 
-      <aside>{/* Sidebar, reklame, dodatne informacije, widgeti... */}</aside>
+      {/* <aside></aside> */}
 
       <footer>
         <Dock panelHeight={68} baseItemSize={50} magnification={70} />
