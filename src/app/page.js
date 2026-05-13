@@ -21,7 +21,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/20 z-10" />
           <div className="relative h-full z-20">
             <div className="absolute top-[30%] left-[47%] -translate-x-[50%] -translate-y-[50%] w-60 md:w-md lg:w-lg">
-              <h1 className="inline-flex items-center whitespace-nowrap text-3xl font-bold md:text-6xl lg:text-7xl">
+              <strong className="inline-flex items-center whitespace-nowrap text-3xl font-bold md:text-6xl lg:text-7xl">
                 WE DO{" "}
                 <RotatingText
                   texts={["CLEANING", "MOVING"]}
@@ -45,7 +45,7 @@ export default function Home() {
                   auto
                   loop
                 />{" "}
-              </h1>
+              </strong>
             </div>
             <div>
               <AnimatedContent
@@ -70,7 +70,7 @@ export default function Home() {
                   className="w-60"
                 />
               </AnimatedContent>
-              <h1 className="absolute top-[70%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-full text-center text-4xl md:top-[75%]">
+              <h1 className="absolute top-[70%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-full text-center text-4xl md:top-[75%] md:text-6xl">
                 <ShinyText
                   text="GRIME 2 PRIME"
                   speed={2}
@@ -89,8 +89,8 @@ export default function Home() {
         </section>
         <section className="flex flex-col max-w-3xl my-10 mx-auto px-10 text-black">
           <article className="text-center">
-            <h2 className="text-3xl text-center mb-5">ABOUT US</h2>
-            <p>
+            <h2 className="text-3xl text-center mb-5 md:text-5xl">ABOUT US</h2>
+            <p className="md:text-lg">
               Based in Vancouver, we specialize in professional apartment
               cleaning and reliable moving services designed to make your life
               easier. Our goal is to provide fast, efficient, and high-quality
@@ -112,6 +112,26 @@ export default function Home() {
               height={800}
               priority
               className="max-w-60 mx-auto"
+            />
+          </article>
+        </section>
+        <section className="grid grid-cols-1 md:grid-cols-2 bg-gray-200 text-black">
+          <article className="flex min-h-87.5 flex-col items-center justify-center p-8 text-center">
+            <h2 className="text-3xl font-bold">
+              Reliable Moving & Cleaning Services
+            </h2>
+            <button className="mt-6 px-7 py-3 rounded-2xl text-xl bg-blue-500 text-white cursor-pointer">
+              CALL US
+            </button>
+          </article>
+
+          <article className="relative min-h-87.5">
+            <Image
+              src="/aboutUs.webp"
+              alt="About us section"
+              fill
+              priority
+              className="object-cover"
             />
           </article>
         </section>
